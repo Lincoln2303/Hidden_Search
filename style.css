@@ -1,0 +1,76 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* I.02. First we add a new kind of background-image to body: */
+body {
+    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* NOTE: We use "overflow" on hidden, because we don't want scroll bars to be shown by default */
+    /* overflow: hidden; */
+    margin: 0;
+}
+
+/* I.03. We're styling the search class: */
+.search {
+    position: relative;
+    height: 50px;
+}
+
+/* I.04. We're styling the search input: */
+/* NOTE: It's going to start out with these codes, and it'll expand when we click */
+.search .input {
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    /* NOTE: We're going to add a transition on the width property */
+    transition: width 0.3s ease;
+}
+
+/* I.05. Then we're styling button: (NOTE: Use class as well)*/
+.btn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    /* NOTE: We want to position this absoulute (within the "relative" positioned search) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    /* NOTE: We also want a transition on this (we want to push over the button to the left) */
+    transition: transform 0.3s ease; 
+}
+
+/* I.06. We want to set the outline none, when both btn and input is on focus: */
+.btn:focus,
+.input:focus {
+    outline: none;
+}
+
+/* I.07. We add here the active class on search: */
+/* NOTE: In translation, when we have the active class on search, we want the input class to expand */
+.search.active .input {
+     width: 200px;
+}
+
+/* I.08. We also want the button to move over: */
+/* AFTER: Then we do our js (I.09. */
+.search.active .btn {
+    /* NOTE: We want to move it to the right the following way (positive number moves right, negative to the left)  */
+    transform: translateX(198px);
+}
+
+
+
