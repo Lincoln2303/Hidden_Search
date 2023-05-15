@@ -19,7 +19,7 @@ A simple hidden search bar implementation using HTML, CSS, and JavaScript.
 
 ## Usage
 
-1. Clone the repository: `git clone https://github.com/Lincoln2303/Hidden_Search.git`
+1. Clone the repository.
 2. Open the `index.html` file in your web browser.
 
 ## Acknowledgement
